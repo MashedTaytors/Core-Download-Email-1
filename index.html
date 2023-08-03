@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<!-- Above is most compaable document type across  email clients-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!--compatablility tag for internex explorer and Microsoft edge-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for mobile devices-->
+<title>Modern HTML Email Template</title>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+
+
+	html{
+		  /* Custom Color Properties */
+		--shotaPurp: #2a0c4e;
+        --shotaPurpf0: #2a0c4ef0;
+        --shotaPurp80: #2a0c4e80;
+        --shotaBlueShade: #355f6a;
+        --shotaBlueShadef0: #355f6af0;
+        --shotaBlueShade80: #335f6a80;
+        --shotaPrussian: #283346;
+        --shotaPrussianf0: #283346f0;
+        --shotaPrussian80: #28334680;
+        --shotaOrange: #e9772c;
+        --shotaOrangef0: #e9772cf0;
+        --shotaOrange80: #e9772c80;
+        --shotaRobin: #4ec9c3;
+        --shotaRobinf0: #4ec9c3f0;
+        --shotaRobine0: #4ec9c3e0;
+        --shotaRobin80: #4ec9c380;
+        --shotaRobin40: #4ec9c340;
+        --shotaRobin20: #4ec9c320;
+        --shotaCadet: #9ea3ad;
+        --shotaCadetf0: #9ea3adf0;
+        --shotaCadet80: #9ea3ad80;
+        --shotaPowder: #f6faf7;
+        --shotaPowderf0: #f6faf7f0;
+        --shotaPowder80: #f6faf780;
+        --onyxGray: #222222;
+        --onyxGrayf0: #222222f0;
+        --onyxGray80: #22222280;
+        --steelGray: #333333;
+        --steelGrayf0: #333333f0;
+        --steelGray80: #33333380;
+        --linearBrightPurple: #c261fe;
+        --linearBrightPurplef0: #c261fef0;
+        --linearBrightPurple80: #c261fe80;
+        --linearDullPurple: rgb(53, 42, 79);
+	}
+	body {
+		margin: 0;
+		background-color:var(--steelGray);
+		font-family: Roboto, sans-serif;
+	}
+	table {
+		border-spacing: 0;
+		font-family: Roboto, sans-serif;
+	}
+	td {
+		padding: 0;
+		font-family: Roboto, sans-serif;
+	}
+	img {
+		border: 0;
+	}
+	a{
+		color: var(--shotaRobin);
+		text-decoration: none;
+		font-family: Roboto, sans-serif;
+	}
+	p{
+		font-size: 11px;
+		font-weight:300;
+		line-height: 20px;
+		font-family: Roboto, sans-serif;
+	}
+
+	.itemTitle{
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: -10px;
+	}
+
+	.wrapper{
+		width: 100%;
+		table-layout: fixed; /* Ensures the table isn't any wider than the center tag  */
+		background-color: var(--steelGray);
+		padding-bottom: 60px;
+	}
+
+	.main{
+		background-color: var(--shotaPowder);
+		margin: 0 auto;
+		width: 100%;
+		max-width: 600px;
+		border-spacing: 0; /* Ensures there isn't any spacing aside the main table in certain email clients*/
+		font-family: sans-serif;
+		color: var(--onyxGray);
+	}
+	.twoColumns{
+		text-align: center;
+		font-size: 0;
+	}
+	.twoColumns .column{
+		width: 100%;
+		max-width: 300px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
+
+	.threeColumns{
+		text-align: center;
+		font-size: 0;
+		padding: 15px 0 25px;
+	}
+
+	.threeColumns .column{
+		width: 100%;
+		max-width: 200px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+	}
+	.threeColumns .padding{
+		padding: 15px;
+	}
+
+	.threeColumns .content{
+		font-size: 15px;
+		line-height: 20px;
+		padding: 0 5px;
+	}
+
+	.sixColumns{
+		text-align: center;
+		font-size: 0;
+		padding: 15px 10px 5px;
+	}
+
+	
+	.sixColumns .column{
+		width: 100%;
+		max-width: 190px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.sixColumns .padding{
+		padding: 5px 5px;
+	}
+
+	.sixColumns .content{
+		font-size: 15px;
+		line-height: 20px;
+		text-align: left;
+		padding:0 5px;
+		color: var(--shotaPowder);
+	}
+	
+	.twoColumns.last{
+		padding: 15px 0; /* the zero here allows for the two  */
+	}
+	.twoColumns .padding{
+		padding: 20px;
+	}
+	.twoColumns .content{
+		font-size:15px;
+		line-height: 20px;
+		text-align: left;
+	}
+	.button{
+		background-color: #ffffff;
+		color: var(--onyxGray);
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
+	.button-dark{
+		background-color: var(--onyxGray);
+		color: #ffffff;
+		text-decoration: none;
+		padding: 12px 20px;
+		border-radius: 5px;
+		font-weight: bold;
+	}
+
+	.content{
+		font-family: Roboto, Arial, sans-serif; 
+	}
+
+	@media only screen and (min-width: 500px) and (max-width: 600px){
+		.sixColumns{
+		text-align: center;
+		font-size: 0;
+		padding: 15px 0 25px;
+	}
+	}
+
+	@media only screen and (max-width: 499px){
+		.sixColumns{
+		text-align: center;
+		font-size: 0;
+		padding: 15px 0px 25px;
+		}
+		.sixColumns .column{
+		width: 100%;
+		max-width: 190px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.sixColumns .padding{
+		padding: 5px 0px 5px 25px;
+	}
+
+	.sixColumns .content{
+		font-size: 15px;
+		line-height: 20px;
+		text-align: left;
+		padding:0 5px;
+	}
+	
+	}
+
+</style>
+</head>
+<body>
+<center class="wrapper">
+	<table class="main" width="100%">
+		<!-- TOP BORDER -->
+
+		<tbody><!-- BANNER IMAGE -->
+			<tr>
+				<td style="background: url('https://bit.ly/3JVCqBv') left / cover no-repeat; border: none; padding:15px 15px 70px 15px;">
+				<table style="width: 100%; background-color: transparent;">
+					<tbody>
+						<tr>
+							<td class="">
+								<a href="https://www.nagios.com" style="text-decoration: none;">
+									<img alt="Nagios" border="0" height="15" src="https://bit.ly/3pIkhA9" style="display: block; max-width: 64px; padding: 0 0 80px 0px "> 
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 10px 67px 20px; font-weight: 500;text-align: center; font-size: 32px; color: #ffffff;" class="">Welcome to the Nagios Community!
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<a href="https://support.nagios.com/nagios-core-resources/#get_started_section">
+					  				<img alt="" border="0" height="35px" src="https://bit.ly/44kHQ0J" style="max-width: 100%; text-align: center; color: #f6faf7; padding: 14px 0 30px 0;" >
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</td>
+			</tr>
+	
+	  
+	  
+		<!--GREETING/TXT SECTION-->
+		<tr>
+	
+			<td>
+			<table style="background: #f6faf7;">
+				<tbody>
+					<tr style="padding: 0;">
+						<td style="text-align: center; padding: 40px 0 0;" class="">
+						<p style="font-size: 35px; font-weight: 500; padding: 0; margin: 0;">Hi,</p>
+
+						<p style="font-size: 14px; line-height: 20px; padding: 20px 131.5px; margin: 0;">You just downloaded Nagios Core. Smart move! You are officially a genius and now part of the Nagios Community! Here are some resources to get you started</p>
+						</td>
+					</tr>
+					<tr style="padding: 0;">
+						<td style="text-align: center; padding: 10px 100px 40px;" class=""><img alt="Down arrow" border="0" height="auto" src="https://bit.ly/3rv5BVj" style="width: 8px; border-width: 0px; border-style: none;" width="8"><!-- looks kinda blurry --></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- SIX COLUMN SECTION -->
+		<tr>
+			<td>
+			<table style="background-color:  var(--shotaPrussian); color: #ffffff;" width="100%">
+				<tbody>
+					<tr>
+						<td class="">
+						<table width="100%">
+							<tbody>
+								<tr>
+									<td class="sixColumns">
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://www.nagios.com/products/nagios-xi/"><img alt="Monitoring Wizards" src="https://bit.ly/3JWJwpk" style="max-width: 35px; width: 35px;margin-bottom: 10px;" width="35"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Upgrade from Nagios Core</p>
+
+															<p>Get monitoring in a quarter of the time with Nagios XI</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/toc.html"><img alt="Request a Demo" src="https://bit.ly/3rrQOLl" style="max-width: 35px; width: 35px;margin-bottom: 10px;" width="35"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Nagios Core User Guide</p>
+
+															<p>Complete overview of Nagios Core</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/quickstart.html"><img alt="Quickstart" src="https://bit.ly/3XLb86t" style="max-width: 30px; width: 30px; margin-bottom: 10px;" width="30"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Quick Installation Guides</p>
+
+															<p>Installation and documentation</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://answerhub.nagios.com/support/s/knowledge"><img alt="Knowledge Base" src="https://bit.ly/3XQi5mx" style="max-width: 35px; width: 35px;margin-bottom: 10px;" width="35"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Knowledge Base</p>
+
+															<p>Helpful Nagios resources orgranized by product.</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://www.nagios.com/tours/"><img alt="Training Videos" src="https://bit.ly/3POG2ZH" style="max-width: 40px; width: 40px;margin-bottom: 10px;" width="40"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Nagios Core Video Tour</p>
+
+															<p>Video tour of the interface</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="column">
+										<tbody>
+											<tr>
+												<td class="padding">
+												<table class="content">
+													<tbody>
+														<tr>
+															<td class=""><a href="https://support.nagios.com/forum/"><img alt="Forum" src="https://bit.ly/3PU49pF" style="max-width: 35px; width: 35px;margin-bottom: 10px;" width="35"></a></td>
+														</tr>
+														<tr>
+															<td class="">
+															<p class="itemTitle">Nagios Forum</p>
+
+															<p>Engage with the Nagios community.</p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p style="text-align: center; padding-bottom: 20px;">Learn more about Nagios XI vs Core in our blog post <a href="https://www.nagios.com/news/2021/01/comparison-guide-nagios-xi-vs-nagios-core/">here.</a></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- FOOTER SECTION -->
+		<tr>
+			<td style="background-color: #f6faf7;">
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td style="text-align: center; padding: 45px 20px 30px; color: #171a1b;" width="180px" class=""><img alt="Happy Monitoring" border="0" height="84" src="https://bit.ly/3XRiTIc" style="width: 361px; height: 84px; border-width: 0px; border-style: none;" width="361"></td>
+					</tr>
+					<tr height="40px" style="text-align: center; padding: 0px 20px; color: #171a1b;" width="180px">
+						<td class=""><img alt="Nagios logo in balck type" height="100" src="https://bit.ly/46O5Afm" style="width: 80px; height: 100%;" width="80"></td>
+					</tr>
+					<tr height="25px" style="text-align: center; padding: 0; color: #171a1b;" width="180px">
+						<td class="links"><a href="https://www.facebook.com/NagiosInc" style="padding: 10px 3px;"><img alt="Black Facebook icon linking to the Nagios Facebook page" src="https://bit.ly/44nu25J" style="width: 20px;" width="20"> </a> <a href="https://www.linkedin.com/company/nagios-enterprises-llc" style="padding: 10px 3px;"> <img alt="" border="0" height="20" src="https://bit.ly/3NSnxRx" style="width: 20px; height: 20px; border-width: 0px; border-style: solid;" width="20"> </a> <a href="https://twitter.com/nagiosinc" style="padding: 10px 3px;"> <img alt="Black Twitter icon linking to the Nagios Twitter feed" src="https://bit.ly/3PRYOzi" style="width: 20px;" width="20"> </a> <a href="https://www.youtube.com/nagiosvideo" style="padding: 10px 3px;"> <img alt="Black YouTube icon linking to the Nagios YouTube channel" src="https://bit.ly/3pKBN6Q" style="width: 20px;" width="20"> </a></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; padding: 0px 20px 5px; color: #171a1b;" width="180px" class="">
+						<!-- <p style="padding: 0px; font-size: 10px; font-weight: 500; line-height: 20px;"><strong>Enjoy our emails? <a href="https://www.nagios.com/newsletter-signup/">Sign up</a> for our monthly newsletter to stay informed!</strong></p> -->
+
+						<p style="padding: 0px; font-size: 10px; line-height: 20px;">Nagios Enterprises, 1295 Bandana Blvd N. Suite 165, St. Paul, MN 55108, US, (651) 204-9102</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center; padding: 0px 20px 45px; color: #171a1b; font-size: 12px;" width="180px" class="">{{unsubscribe}}</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</center>
+</body>
+</html>
